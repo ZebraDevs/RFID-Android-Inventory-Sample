@@ -1,0 +1,26 @@
+<resources>
+    <declare-styleable name="RangeGraph">
+        <!-- Allow optional setting of min and max from the XML layout -->
+        <attr name="minimum" format="integer"/>
+        <attr name="maximum" format="integer"/>
+        <!-- Provide an Orientation parameter as an enum ** Not implemented yet! -->
+        <attr name="orientation" format="enum">
+            <enum name="vertical" value="0"/>
+            <enum name="horizontal" value="1"/>
+        </attr>
+        <!-- Allow to override the default colors for plain, In, and Out of Range -->
+        <attr name="colorNeutral" format="color" />
+        <attr name="colorInRange" format="color" />
+        <attr name="colorOutOfRange" format="color" />
+
+    </declare-styleable>
+
+    <!-- Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels. -->
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference" />
+        <attr name="metaButtonBarButtonStyle" format="reference" />
+    </declare-styleable>
+</resources>
